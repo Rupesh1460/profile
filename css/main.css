@@ -5153,16 +5153,13 @@ Created using IcoMoon - icomoon.io
 
 .cc-profile-image a:before {
   content: "";
-  border: 15px solid rgba(55, 140, 63, 0.6);
+  border: 5px solid rgba(55, 140, 63, 0.6);
   border-radius: 50%;
   height: 180px;
   width: 180px;
   position: absolute;
   left: 0;
-  -webkit-animation: pulsate 1.6s ease-out;
-          animation: pulsate 1.6s ease-out;
-  -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
+  
   opacity: 0.0;
   z-index: 99; }
 
