@@ -20,7 +20,7 @@
       </style>
     </noscript>
     </head>
-  <body id="top">
+  <body id="top" onload="age()">
     <header>
       <div class="profile-page sidebar-collapse">
         <nav class="navbar navbar-expand-lg fixed-top navbar-transparent bg-primary" color-on-scroll="400">
@@ -78,7 +78,7 @@
             <div class="h4 mt-0 title">Basic Information</div>
             <div class="row">
               <div class="col-sm-4"><strong class="text-uppercase">Age:</strong></div>
-              <div class="col-sm-8">23</div>
+              <div class="col-sm-8"><div id="age"></div></div>
             </div>
             <div class="row mt-3">
               <div class="col-sm-4"><strong class="text-uppercase">Email:</strong></div>
@@ -480,6 +480,19 @@
         <p>&copy; Rupesh Mahato. All rights reserved.
       </div>
     </footer>
+    
+    <script type="text/javascript">
+  function age() {
+  var y1 = "1998";
+
+  var date = new Date();
+  var y2 = date.getFullYear();
+  
+  var y = y2 - y1;
+
+  document.getElementById('age').innerHTML = y;
+}
+</script>
       
     <script src="js/core/jquery.3.2.1.min.js?ver=1.1.0"></script>
     <script src="js/core/popper.min.js?ver=1.1.0"></script>
