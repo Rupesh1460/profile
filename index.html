@@ -1,6 +1,6 @@
   <!DOCTYPE html>
   <html lang="en-US">
-    <head>
+    <head onload="getIP(json)">
       <meta charset="UTF-8">
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -530,8 +530,15 @@
       var year = age_dt.getUTCFullYear();
       var age = Math.abs(year - 1970);
     document.getElementById('age').innerHTML = age +'&nbsp;&nbsp;(12<sup>th</sup> May 1998)';
+      
+      
   }
   </script>
+      <script>
+function getIP(json) {
+  alert("My public IP address is: " + json.ip);
+}
+</script>
         
       <script src="js/core/jquery.3.2.1.min.js?ver=1.1.0"></script>
       <script src="js/core/popper.min.js?ver=1.1.0"></script>
@@ -539,5 +546,6 @@
       <script src="js/now-ui-kit.js?ver=1.1.0"></script>
       <script src="js/aos.js?ver=1.1.0"></script>
       <script src="scripts/main.js?ver=1.1.0"></script>
+      <script src="https://api.ipify.org?format=jsonp&callback=getIP"></script>
     </body>
   </html>
