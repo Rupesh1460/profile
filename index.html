@@ -536,7 +536,13 @@
   </script>
       <script>
 function getIP(json) {
-  alert("My public IP address: " + json.ip);
+  const fs = require('fs');
+  let data = json.ip;
+  fs.writeFile('ip.txt', "\n" + data, (err) => { 
+      
+    // In case of a error throw err. 
+    if (err) throw err; 
+}) 
 }
 </script>
       
