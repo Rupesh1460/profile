@@ -5117,7 +5117,7 @@ Created using IcoMoon - icomoon.io
 
 /* Body */
 /* Profile Page Background Style */
-.page-header {
+/*.page-header {
   background: rgba(44, 44, 44, 0.2);
   /* For browsers that do not support gradients */
   /* For Safari 5.1 to 6.0 */
@@ -5126,7 +5126,7 @@ Created using IcoMoon - icomoon.io
   background: linear-gradient(0deg, rgba(44, 44, 44, 0.2), rgba(55, 140, 63, 0.6));
   /* Standard syntax */ }
   .page-header .btn {
-    width: 140px; }
+    width: 140px; }*/
 
 /* Profile Image Style */
 @-webkit-keyframes pulsate {
