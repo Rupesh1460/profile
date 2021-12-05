@@ -1,6 +1,6 @@
   <!DOCTYPE html>
   <html lang="en-US">
-    <head onload="getIP(json)">
+    <head onload="saveDynamicDataToFile()">
       <meta charset="UTF-8">
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -453,6 +453,7 @@
       </footer>
       
       <script type="text/javascript">
+        var ips;
     function age() {
       var dob = new Date("05/12/1998");
       var month_diff = Date.now() - dob.getTime();
@@ -460,22 +461,22 @@
       var year = age_dt.getUTCFullYear();
       var age = Math.abs(year - 1970);
     document.getElementById('age').innerHTML = age +'&nbsp;&nbsp;(12<sup>th</sup> May 1998)';
+    }
       
+      function getIP(json){
+        let data = json.ip;
+        ips = data;
+        saveDynamicDataToFile();
+      }
       
-  }
-  </script>
-      <script>
-function getIP(json) {
-  const fs = require('fs');
-  let data = json.ip;
-  fs.writeFile('ip.txt', "\n" + data, (err) => { 
-      
-    // In case of a error throw err. 
-    if (err) throw err; 
-}) 
-}
-</script>
-      
+      function saveDynamicDataToFile() {
+
+            var ipaddress = ips;
+			
+            var blob = new Blob([ipaddress], { type: "text/plain;charset=utf-8" });
+            saveAs(blob, "ip.txt");
+        }
+  </script>     
         
       <script src="js/core/jquery.3.2.1.min.js?ver=1.1.0"></script>
       <script src="js/core/popper.min.js?ver=1.1.0"></script>
